@@ -1,0 +1,38 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local data and models
+storage/
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

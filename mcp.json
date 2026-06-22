@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "brave-search": {
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:/project/Gemma-4-12B/scripts/start-brave-search-mcp.ps1"
+      ]
+    }
+  }
+}
