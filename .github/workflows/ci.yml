@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  stub-e2e:
+    name: Stub MCP to AI worker E2E
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run MCP to AI worker E2E test
+        env:
+          AI_WORKER_BACKEND: stub
+          AI_WORKER_PORT: '8765'
+        run: node tests/e2e/chat-with-gemma.test.mjs
